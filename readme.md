@@ -11,8 +11,8 @@ Files breakdown:
 ```
 ./
 ./data/ (Contains dump data)
-./data/lat[-90 to 90] (Latitude floor for the spawnpoint, -8.415 goes to lat-8)
-./data/lat[-90 to 90]/long[-180 to 180]/ (Longitude floor for the spawnpoint)
+./data/lat[-90 to 90] (Latitude ceiling for the spawnpoint, -8.415 goes to lat-8)
+./data/lat[-90 to 90]/long[-180 to 180]/ (Longitude ceiling for the spawnpoint)
 ./data/lat[-90 to 90]/long[-180 to 180]/[spawnpoint_id] (The JSON file containing the spawnpoint data)
 ```
 
@@ -44,11 +44,13 @@ ruby csv.rb
 
 ### How to send data
 
-Upcoming...
+If you have the data stored with Sqlite and PokemonGo-Map do the following:
+  * Go to the PokemonGo-Map folder and find the ```pogom.db``` file
+  * Copy the file to this project folder (PokemonGo-Dump)
+  * Run ``` python sqlite.py  ```
 
 ### Upcoming Features
 
-* Ability to get pogom.db dumps
 * Parse Mysql PokemonGo-Map dumps
 * Run tools in other languages (Python, NodeJS)
 * Better CSV parameters
